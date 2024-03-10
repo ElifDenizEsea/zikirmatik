@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {StyleSheet, View, Text, Button,Pressable, TextInput} from 'react-native';
 import AddButton from './AddButton';
-//import xyz from './Counter.module.css';
 const Counter = () => {
     const [count, setCount] = useState(0);
     const [number, onChangeNumber] = React.useState('');
@@ -10,18 +9,23 @@ const Counter = () => {
         <View>
             <TextInput style={styles.input}
         onChangeText={onChangeNumber}
-        value={number}
-        placeholder="Zikir sayisi giriniz"
-        keyboardType="numeric" />
-             <Pressable style={styles.button} 
-              onPress={() => {setCount(0)}} >
+              value={number}
+              placeholder="Zikir sayisi giriniz"
+              keyboardType="numeric" />
+             <Pressable style={styles.button}   onPress={() => {setCount(0);onChangeNumber}} >
                 <Text style={styles.text}>Baslat</Text>
              </Pressable>
         </View>
         <Text> </Text>
         <View >
-          <AddButton   onAddPress={() => {setCount(count + 1)} } 
-          title= "elif " />
+          <AddButton   
+          onAddPress = {() => {
+            if(count < number) {
+              setCount(count+1)
+            }}
+        }
+          />
+        
         </View>
         <Text> </Text>
         <Text> </Text>
@@ -31,9 +35,12 @@ const Counter = () => {
         <Text> </Text>
         <Text> </Text>
         <Text> </Text>
+        <View>
+           <Text style={styles.titleText} >{count} </Text>
+    {count==number && count!=0 && <Text style={styles.titleText} >Tamanlandi</Text>}
+    </View>
         <Text> </Text>
         <View >
-           <Text> {count} </Text>
            <Pressable style={styles.button} 
              onPress={() => {setCount(0);onChangeNumber("")}} > 
              <Text style={styles.text}>Sifirla</Text>
@@ -47,10 +54,11 @@ const Counter = () => {
 const styles = StyleSheet.create({
   input: {
     height: 40,
-    width:140,
+    width:158,
     borderWidth: 1,
     padding: 10,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   button: {    
     alignItems: 'center',
@@ -61,6 +69,14 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     elevation: 3,
     backgroundColor: 'black',
+  },
+  titleText: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: 30,
+    fontWeight: 'bold',
+    textAlignVertical: "center",
+    textAlign: "center"
   },
   text: {
     fontSize: 16,
