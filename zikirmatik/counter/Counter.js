@@ -1,49 +1,74 @@
 import React, { useState } from 'react';
-import {StyleSheet, View, Text, Button, TextInput } from 'react-native';
+import {StyleSheet, View, Text, Button,Pressable, TextInput} from 'react-native';
+import AddButton from './AddButton';
+//import xyz from './Counter.module.css';
 const Counter = () => {
     const [count, setCount] = useState(0);
+    const [number, onChangeNumber] = React.useState('');
    return (
+    <View>
         <View>
-            <Text> Zikir sayisi giriniz </Text>
-            <TextInput />
+            <TextInput style={styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder="Zikir sayisi giriniz"
+        keyboardType="numeric" />
+             <Pressable style={styles.button} 
+              onPress={() => {setCount(0)}} >
+                <Text style={styles.text}>Baslat</Text>
+             </Pressable>
+        </View>
+        <Text> </Text>
+        <View >
+          <AddButton   onAddPress={() => {setCount(count + 1)} } 
+          title= "elif " />
+        </View>
+        <Text> </Text>
+        <Text> </Text>
+        <Text> </Text>
+        <Text> </Text>
+        <Text> </Text>
+        <Text> </Text>
+        <Text> </Text>
+        <Text> </Text>
+        <Text> </Text>
+        <View >
+           <Text> {count} </Text>
+           <Pressable style={styles.button} 
+             onPress={() => {setCount(0);onChangeNumber("")}} > 
+             <Text style={styles.text}>Sifirla</Text>
+             </Pressable>
+          
+        </View>
+         </View>
 
-           <Button
-             title="Baslat" onPress={() => {setCount(0)}}
-           />
-    <Text>
-
-
-    </Text>
-
-
-    <Button 
-             onPress={() => {setCount(count + 1)}} style = {styles.Button} title=" "
-           />
-           <Text>
-      
-</Text>
-
-           <Button
-             onPress={() => {setCount(0)}} title="Sifirla"
-           />
-           <Text>You clicked me {count} times</Text>
-       </View>
    );
 }
-const styles = (props) => StyleSheet.create({
-  container: {
-    position: 'relative',
-    zIndex: 0,
-    backgroundColor: 'rgba(255,95,28,0.42)', //add a background to highlight the touchable area
+const styles = StyleSheet.create({
+  input: {
+    height: 40,
+    width:140,
+    borderWidth: 1,
+    padding: 10,
+    alignItems: 'center',
   },
-  button: {
-    backgroundColor: 'rgba(255,255,255,0.51)',
+  button: {    
+    alignItems: 'center',
     justifyContent: 'center',
-    alignContent: 'center',
-    borderWidth: 3,
-    borderRadius: (props.circleDiameter / 2),
-    width: props.circleDiameter,
-    height: props.circleDiameter,
+    paddingVertical: 12,
+    paddingHorizontal: 12,
+    color: "red",
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'black',
+  },
+  text: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: 'bold',
+    letterSpacing: 0.25,
+    color: 'white',
   },
 });
+
 export default Counter;

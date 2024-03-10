@@ -13,8 +13,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    display: 'inline-block',
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+
   },
 });
