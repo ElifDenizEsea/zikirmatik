@@ -1,29 +1,30 @@
 import React, { useState } from 'react';
-import {StyleSheet, View, Text, Button,Pressable, TextInput} from 'react-native';
+import {StyleSheet, View, Text,Pressable, TextInput} from 'react-native';
 import AddButton from './AddButton';
 const Counter = () => {
     const [count, setCount] = useState(0);
     const [number, onChangeNumber] = React.useState('');
    return (
     <View>
-        <View>
+        <View >
             <TextInput style={styles.input}
         onChangeText={onChangeNumber}
               value={number}
               placeholder="Zikir sayisi giriniz"
               keyboardType="numeric" />
-             <Pressable style={styles.button}   onPress={() => {setCount(0);onChangeNumber}} >
-                <Text style={styles.text}>Baslat</Text>
-             </Pressable>
+        
         </View>
         <Text> </Text>
         <View >
           <AddButton   
           onAddPress = {() => {
+            setCount(0);
             if(count < number) {
               setCount(count+1)
             }}
         }
+
+        labelOfButton={count}
           />
         
         </View>
@@ -36,8 +37,8 @@ const Counter = () => {
         <Text> </Text>
         <Text> </Text>
         <View>
-           <Text style={styles.titleText} >{count} </Text>
-    {count==number && count!=0 && <Text style={styles.titleText} >Tamanlandi</Text>}
+           <Text style={styles.titleText} >{count>0?count:""} </Text>
+    {count==number && count!=0 && <Text style={styles.titleText} >Tamamlandi</Text>}
     </View>
         <Text> </Text>
         <View >

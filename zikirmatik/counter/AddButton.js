@@ -1,9 +1,10 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 
-const AddButton = ({onAddPress}) => {
+const AddButton = ({onAddPress},{labelOfButton}) => {
   return (
-    <TouchableOpacity style={styles.cont} onPress={onAddPress}>
+    <TouchableOpacity style={styles.cont} onPress={onAddPress}> 
+    <Text>{labelOfButton}</Text>
       <Image
         source={require('../assets/greencircle.png')}
         style={styles.image}
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
     height: 160,
     width: 160,
-    borderRadius: 300,
+    borderRadius: 500,
     justifyContent: 'center',
     alignItems: 'center',
   },
