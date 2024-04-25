@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import {StyleSheet, View, Text,Pressable, TextInput} from 'react-native';
+import {View, Text,Pressable, TextInput} from 'react-native';
 import AddButton from './AddButton';
+import CustomStyle from '../style/customStyle';
 const Counter = () => {
     const [count, setCount] = useState(0);
     const [number, onChangeNumber] = React.useState('');
    return (
-    <View>
+    <View style={{alignItems:'center'}}>
         <View >
-            <TextInput style={styles.input}
+            <TextInput style={CustomStyle.inputNumber}
         onChangeText={onChangeNumber}
               value={number}
               placeholder="Zikir sayisi giriniz"
@@ -28,23 +29,16 @@ const Counter = () => {
           />
         
         </View>
-        <Text> </Text>
-        <Text> </Text>
-        <Text> </Text>
-        <Text> </Text>
-        <Text> </Text>
-        <Text> </Text>
-        <Text> </Text>
-        <Text> </Text>
+        
         <View>
-           <Text style={styles.titleText} >{count>0?count:""} </Text>
-    {count==number && count!=0 && <Text style={styles.titleText} >Tamamlandi</Text>}
+           <Text style={CustomStyle.finishedText} >{count>0?count:""} </Text>
+    {count==number && count!=0 && <Text style={CustomStyle.finishedText} >Tamamlandi</Text>}
     </View>
         <Text> </Text>
         <View >
-           <Pressable style={styles.button} 
+           <Pressable style={CustomStyle.resetButton} 
              onPress={() => {setCount(0);onChangeNumber("")}} > 
-             <Text style={styles.text}>Sifirla</Text>
+             <Text style={CustomStyle.buttonLabel}>Sifirla</Text>
              </Pressable>
           
         </View>
@@ -52,40 +46,4 @@ const Counter = () => {
 
    );
 }
-const styles = StyleSheet.create({
-  input: {
-    height: 40,
-    width:158,
-    borderWidth: 1,
-    padding: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  button: {    
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 12,
-    color: "red",
-    borderRadius: 4,
-    elevation: 3,
-    backgroundColor: 'black',
-  },
-  titleText: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: 30,
-    fontWeight: 'bold',
-    textAlignVertical: "center",
-    textAlign: "center"
-  },
-  text: {
-    fontSize: 16,
-    lineHeight: 21,
-    fontWeight: 'bold',
-    letterSpacing: 0.25,
-    color: 'white',
-  },
-});
-
 export default Counter;
