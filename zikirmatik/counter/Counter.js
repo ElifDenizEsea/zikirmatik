@@ -2,30 +2,40 @@ import React, { useState } from 'react';
 import {View, Text,Pressable, TextInput} from 'react-native';
 import AddButton from './AddButton';
 import CustomStyle from '../style/customStyle';
-import txts from '../text/turkish';
+import i18n from "../text/general";
+
+import {useTranslation} from 'react-i18next';
+const initI18n = i18n;
+
+
 const Counter = () => {
+  const {t, i18n} = useTranslation();
     const [count, setCount] = useState(0);
     const [number, onChangeNumber] = React.useState('');
    return (
     <View style={{alignItems:'center'}}>
         <View >
-            <TextInput style={CustomStyle.inputNumber}
-        onChangeText={onChangeNumber}
+            <TextInput 
+              style={CustomStyle.inputNumber}
+              onChangeText={onChangeNumber}
               value={number}
-              placeholder={txts.COUNTER.INPUT_ZIKR}
-              keyboardType="numeric" />
+              placeholder={
+                t('COUNTER.INPUT_ZIKR')}
+              keyboardType="numeric" 
+            />
         
         </View>
         <Text> </Text>
         <View >
           <AddButton   
-          onAddPress = {() => {
-            if(count != number){
-            setCount(0);
+            onAddPress = {() => {
+              if(count != number){
+                setCount(0);
+              }
+              if(count < number) {
+                setCount(count+1)
+              }
             }
-            if(count < number) {
-              setCount(count+1)
-            }}
           }
           labelOfButton={count>0?count:""}
           />
@@ -35,13 +45,13 @@ const Counter = () => {
         <View>
           <Text></Text>
           <Text></Text>
-            {count==number && count!=0 && <Text style={CustomStyle.finishedText} >{txts.COUNTER.FINISHED}</Text>}
+            {count==number && count!=0 && <Text style={CustomStyle.finishedText} >{t('COUNTER.FINISHED')}</Text>}
         </View>
     
         <View >
            <Pressable style={CustomStyle.resetButton} 
              onPress={() => {setCount(0);onChangeNumber("")}} > 
-             <Text style={CustomStyle.buttonLabel}>{txts.COUNTER.RESET_BUTTON}</Text>
+             <Text style={CustomStyle.buttonLabel}>{t('COUNTER.RESET_BUTTON')}</Text>
              </Pressable>
         </View>
     </View>
