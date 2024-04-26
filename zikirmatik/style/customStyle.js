@@ -6,14 +6,18 @@ finishedText:{
     fontSize: 30,
     color: '#000'
 },
+countText:{
+    textAlign: 'center',
+    fontSize: 40,
+    color: '#fff'
+},
 resetButton: {    
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 19,
-    paddingHorizontal: 19,
-    borderRadius: 4,
-    elevation: 3,
-    backgroundColor: '#000',
+    height: 40,
+    width:70,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderRadius: 2,
+    backgroundColor: '#ccc',
   },
   inputNumber: {
     height: 40,
