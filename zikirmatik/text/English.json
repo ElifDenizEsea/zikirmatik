@@ -1,0 +1,7 @@
+{
+    "COUNTER":{
+        "RESET_BUTTON": "Reset",
+        "FINISHED": "Done",
+        "INPUT_ZIKR": "Enter Zikr count"
+    }
+}
