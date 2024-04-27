@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {View, Text,Pressable, TextInput} from 'react-native';
+import {Vibration, View, Text,Pressable, TextInput} from 'react-native';
 import AddButton from './AddButton';
 import CustomStyle from '../style/customStyle';
 import i18n from "../text/general";
@@ -7,8 +7,12 @@ import i18n from "../text/general";
 import {useTranslation} from 'react-i18next';
 const initI18n = i18n;
 
-
 const Counter = () => {
+
+  const vibrateDevice=()=>{
+    Vibration.vibrate(1000);
+  }
+
   const {t, i18n} = useTranslation();
     const [count, setCount] = useState(0);
     const [number, onChangeNumber] = React.useState('');
@@ -46,6 +50,7 @@ const Counter = () => {
           <Text></Text>
           <Text></Text>
             {count==number && count!=0 && <Text style={CustomStyle.finishedText} >{t('COUNTER.FINISHED')}</Text>}
+            {count==number && count!=0 && vibrateDevice()}
         </View>
     
         <View >

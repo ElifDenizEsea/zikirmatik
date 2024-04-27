@@ -4,7 +4,7 @@ const CustomStyle=StyleSheet.create({
 finishedText:{
     textAlign: 'center',
     fontSize: 30,
-    color: '#000'
+    color: '#fff'
 },
 countText:{
     textAlign: 'center',
@@ -22,6 +22,8 @@ resetButton: {
   inputNumber: {
     height: 40,
     width:158,
+    color: '#fff',
+    backgroundColor: '#ccc',
     borderWidth: 1,
     padding: 10,
     alignItems: 'center',
@@ -43,7 +45,15 @@ resetButton: {
     backgroundColor: '#0b9e21',
     borderRadius: 100
 
-  }
+  },
+  container: {
+    flex: 1,
+
+  },
+  imageWallpaper: {
+    flex: 1,
+    justifyContent: 'center',
+  },
 
 });
 export default CustomStyle;

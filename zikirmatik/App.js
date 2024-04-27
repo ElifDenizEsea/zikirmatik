@@ -1,22 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, View } from 'react-native';
 import Counter from './counter/Counter';
-import {I18Manager} from 'react-native';
+import CustomStyle from './style/customStyle';
 export default function App() {
+
   return (
-    <View style={styles.container}>
+    <View style={CustomStyle.container}>
+     <ImageBackground source={require('./assets/wallpaper.jpg')} style={CustomStyle.imageWallpaper}  resizeMode="cover" >
            <Counter />
+      </ImageBackground>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    display: 'inline-block',
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-
-  },
-});
