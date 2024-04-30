@@ -7,7 +7,7 @@ import i18n from "../text/general";
 import {useTranslation} from 'react-i18next';
 const initI18n = i18n;
 
-const Counter = () => {
+const Counter = ({navigation}) => {
 
   const vibrateDevice=()=>{
     Vibration.vibrate(1000);
@@ -59,7 +59,10 @@ const Counter = () => {
              <Text style={CustomStyle.buttonLabel}>{t('COUNTER.RESET_BUTTON')}</Text>
              </Pressable>
         </View>
-    </View>
+        <Pressable onPress={() => navigation.navigate('MyList')}>
+          <Text>My List</Text>
+          </Pressable>
+          </View>
 
    );
 }
