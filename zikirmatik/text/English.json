@@ -2,6 +2,12 @@
     "COUNTER":{
         "RESET_BUTTON": "Reset",
         "FINISHED": "Done",
+        "INPUT_ZIKR": "Enter Zikr count",
+        "MY_LIST": "My List"
+    },
+    "ADD_TO_LIST":{
+        "ZIKR_NAME": "What is the zikr name?",
+        "HOW_TO_READ": "How to read",
         "INPUT_ZIKR": "Enter Zikr count"
     }
 }

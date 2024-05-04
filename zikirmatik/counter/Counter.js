@@ -60,7 +60,7 @@ const Counter = ({navigation}) => {
              </Pressable>
         </View>
         <Pressable onPress={() => navigation.navigate('MyList')}>
-          <Text>My List</Text>
+          <Text>{t('COUNTER.MY_LIST')}</Text>
           </Pressable>
           </View>
 

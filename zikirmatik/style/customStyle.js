@@ -11,6 +11,10 @@ countText:{
     fontSize: 40,
     color: '#fff'
 },
+addToListLabel:{
+  textAlign: 'center',
+  fontSize: 40
+},
 resetButton: {    
     height: 40,
     width:70,
@@ -18,6 +22,14 @@ resetButton: {
     paddingHorizontal: 10,
     borderRadius: 2,
     backgroundColor: '#ccc',
+  },
+  listButton: { 
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderRadius: 2,
+    backgroundColor: '#ccc',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   inputNumber: {
     height: 40,
