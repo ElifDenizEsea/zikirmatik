@@ -17,7 +17,7 @@ const AddToList = ({navigation}) => {
 
   const {t, i18n} = useTranslation();
   return (
-  <View style={{ flex: 1, backgroundColor: 'white' }}>
+  <View style={{ flex: 1,}}>
     <Text  style={CustomStyle.resetButton} >{t('ADD_TO_LIST.ZIKR_NAME')} </Text>
     <TextInput  style={CustomStyle.inputNumber} />
 

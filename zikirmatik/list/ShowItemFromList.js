@@ -11,7 +11,7 @@ const initI18n = i18n;
 
 const MyList = ({navigation},{name}) => {
   const vibrateDevice=()=>{
-    Vibration.vibrate(1000);
+    Vibration.vibrate(500);
   }
 
   const {t, i18n} = useTranslation();
@@ -26,13 +26,25 @@ const MyList = ({navigation},{name}) => {
   const [number, onChangeNumber] = React.useState(parseInt(zikrNumber));
 
   return (
-  <View >
+    <View style={{alignItems:'center', flex: 1}}>
+
+    <View  style={{alignItems:'center', flex: 1}}>
+      </View>
 
 <View >
+
+<Text  style={CustomStyle.resetButton} >{t('SHOW_FROM_LIST.ZIKR_NAME')} </Text>
+
         <Text style={CustomStyle.finishedText}>{zikrName}</Text>
+  <Text  style={CustomStyle.resetButton} >{t('SHOW_FROM_LIST.HOW_TO_READ')} </Text>
+
         <Text style={CustomStyle.finishedText}>{zikrHowToRead}</Text>
+
+        <Text  style={CustomStyle.resetButton} >{t('SHOW_FROM_LIST.ZIKR_COUNT')} </Text>
+
+        <Text style={CustomStyle.finishedText}>{zikrNumber}</Text>
         </View>
-        <View >
+        <View  style={{alignItems:'center', flex: 1}}>
           <AddButton   
             onAddPress = {() => {
           console.log(count);
@@ -46,13 +58,13 @@ const MyList = ({navigation},{name}) => {
           />
         
         </View>
-        <View>
+        <View style={{alignItems:'center', flex: 1}}>
           <Text></Text>
           <Text></Text>
             {count==number && count!=0 && <Text style={CustomStyle.finishedText} >{t('COUNTER.FINISHED')}</Text>}
             {count==number && count!=0 && vibrateDevice()}
         </View>
-        <View >
+        <View  style={{alignItems:'center', flex: 1}}>
            <Pressable style={CustomStyle.resetButton} 
              onPress={() => {setCount(0);onChangeNumber(parseInt(zikrNumber))}} > 
              <Text style={CustomStyle.buttonLabel}>{t('COUNTER.RESET_BUTTON')}</Text>

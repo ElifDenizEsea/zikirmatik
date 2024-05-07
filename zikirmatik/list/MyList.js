@@ -8,11 +8,15 @@ import CustomStyle from '../style/customStyle';
 const MyList = ({navigation}) => {
   return (
 
-  <View style={{ flex: 1, backgroundColor: 'white' }}>
+  <View style={{ flex: 1}} >
+
+<View style={{ flex: 1}}>
+  </View>
     <ScrollView>
     {DATA.map(item=> 
     {return(
-      <View  key={item.name}>
+      <View  key={item.name} style={{
+         flex: 1}}>
           <Pressable style={CustomStyle.listButton}  onPress={() => navigation.navigate('ShowItemFromList', {item})}>
           <Text>{item.name}</Text>
           </Pressable>
@@ -22,10 +26,11 @@ const MyList = ({navigation}) => {
   })}
 
   </ScrollView>
-
+<View style={{ alignItems:'center',flex: 1}}>
   <Pressable style={CustomStyle.listButton}  onPress={() => navigation.navigate('AddToList')}>
           <Text>add</Text>
           </Pressable>
+  </View>
   </View>
   );
    

@@ -9,5 +9,10 @@
         "ZIKR_NAME": "Zikir ismi giriniz",
         "HOW_TO_READ": "Okunusunu giriniz",
         "INPUT_ZIKR": "Zikir sayisi giriniz"
+    },
+    "SHOW_FROM_LIST":{
+        "ZIKR_NAME": "Zikir ismi",
+        "HOW_TO_READ": "Okunusunu",
+        "ZIKR_COUNT": "Zikir sayisi"
     }
 }

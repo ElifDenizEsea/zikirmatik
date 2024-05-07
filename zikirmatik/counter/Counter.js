@@ -10,15 +10,17 @@ const initI18n = i18n;
 const Counter = ({navigation}) => {
 
   const vibrateDevice=()=>{
-    Vibration.vibrate(1000);
+    Vibration.vibrate(500);
   }
 
   const {t, i18n} = useTranslation();
     const [count, setCount] = useState(0);
     const [number, onChangeNumber] = React.useState('');
    return (
-    <View style={{alignItems:'center'}}>
-        <View >
+    <View style={{alignItems:'center', flex: 7,}}>
+    <View style={{alignItems:'center', flex: 1}}>
+      </View>
+        <View style={{alignItems:'center', flex: 1}}>
             <TextInput 
               style={CustomStyle.inputNumber}
               onChangeText={onChangeNumber}
@@ -30,7 +32,7 @@ const Counter = ({navigation}) => {
         
         </View>
         <Text> </Text>
-        <View >
+        <View  style={{alignItems:'center', flex: 1,}}>
           <AddButton   
             onAddPress = {() => {
               if(count != number){
@@ -46,26 +48,25 @@ const Counter = ({navigation}) => {
         
         </View>
         
-        <View>
+        <View style={{alignItems:'center', flex: 1,}}>
           <Text></Text>
           <Text></Text>
             {count==number && count!=0 && <Text style={CustomStyle.finishedText} >{t('COUNTER.FINISHED')}</Text>}
             {count==number && count!=0 && vibrateDevice()}
         </View>
     
-        <View >
+        <View  style={{alignItems:'center', flex: 1,}}>
            <Pressable style={CustomStyle.resetButton} 
              onPress={() => {setCount(0);onChangeNumber("")}} > 
              <Text style={CustomStyle.buttonLabel}>{t('COUNTER.RESET_BUTTON')}</Text>
              </Pressable>
         </View>
-        <Pressable onPress={() => navigation.navigate('MyList')}>
-          <Text>{t('COUNTER.MY_LIST')}</Text>
-          </Pressable>
-          <Pressable onPress={() => navigation.navigate('showQibla')}>
-          <Text>showQibla</Text>
+        <View style={{alignItems:'left', flex: 1,}}>
+        <Pressable  style={CustomStyle.customListButton} onPress={() => navigation.navigate('MyList')}>
+          <Text style={CustomStyle.buttonLabel}>{t('COUNTER.MY_LIST')}</Text>
           </Pressable>
           </View>
+        </View>
 
    );
 }

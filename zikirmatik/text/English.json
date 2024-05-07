@@ -9,5 +9,10 @@
         "ZIKR_NAME": "What is the zikr name?",
         "HOW_TO_READ": "How to read",
         "INPUT_ZIKR": "Enter Zikr count"
+    },
+    "SHOW_FROM_LIST":{
+        "ZIKR_NAME": "Zikir name",
+        "HOW_TO_READ": "How to read",
+        "ZIKR_COUNT": "Zikr count"
     }
 }

@@ -23,6 +23,14 @@ resetButton: {
     borderRadius: 2,
     backgroundColor: '#ccc',
   },
+ customListButton: {    
+    height: 40,
+    width:80,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderRadius: 2,
+    backgroundColor: '#ccc',
+  },
   listButton: { 
     paddingVertical: 10,
     paddingHorizontal: 10,
