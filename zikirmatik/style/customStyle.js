@@ -17,13 +17,13 @@ resetButton: {
     paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 2,
-    backgroundColor: '#ccc',
+    backgroundColor: '#FFE5CC',
   },
   inputNumber: {
     height: 40,
     width:158,
-    color: '#fff',
-    backgroundColor: '#ccc',
+    color: '#994C00',
+    backgroundColor: '#FFE5CC',
     borderWidth: 1,
     padding: 10,
     alignItems: 'center',
@@ -35,14 +35,14 @@ resetButton: {
     lineHeight: 21,
     fontWeight: 'bold',
     letterSpacing: 0.25,
-    color: 'white',
+    color: '#994C00',
   },
   countButton:{
     width:200,
     height:200,
     alignItems: 'center',
     justifyContent: "center",
-    backgroundColor: '#0b9e21',
+    backgroundColor: '#994C00',
     borderRadius: 100
 
   },
