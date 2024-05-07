@@ -3,7 +3,7 @@ import Counter from './counter/Counter';
 import MyList from './list/MyList';
 import AddToList from './list/AddToList';
 import ShowItemFromList from './list/ShowItemFromList';
-import showQibla from './qibla/showQibla';
+import ShowQibla from './qibla/ShowQibla';
 import CustomStyle from './style/customStyle';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -21,7 +21,6 @@ function App() {
       <Stack.Screen name="MyList" component={MyList} />
       <Stack.Screen name="AddToList" component={AddToList} />
       <Stack.Screen name="ShowItemFromList" component={ShowItemFromList} />
-      <Stack.Screen name="showQibla" component={showQibla} />
      </Stack.Navigator>
     </NavigationContainer>
        
