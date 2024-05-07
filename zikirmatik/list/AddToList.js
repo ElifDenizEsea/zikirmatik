@@ -3,31 +3,13 @@ import {View, Text,TextInput,Pressable} from 'react-native';
 import CustomStyle from '../style/customStyle';
 import {useTranslation} from 'react-i18next';
 import i18n from "../text/general";
-import  RNFS from 'react-native-fs';
+import DATA from '../files/list.json';
 
 
 const initI18n = i18n;
 
 const save=()=>{
-
-  let data = RNFS.readFileSync('../files/list.json');
-  let list = JSON.parse(data);
-  let newZikr={
-    
-      name:"",
-      howToRead:"",
-      number:10,
-      lastCount:0
-  };
-  console.log('elif');
-  console.log(newZikr);
-  list.push( newZikr);
-  console.log(list);
-  RNFS.writeFile('../files/list.json', JSON.stringify(list), function(err) {
-    if (err) {
-      console.log(err);
-    }
-  });
+  
 }
 
 

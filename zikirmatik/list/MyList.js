@@ -12,8 +12,8 @@ const MyList = ({navigation}) => {
     <ScrollView>
     {DATA.map(item=> 
     {return(
-      <View  key={item.id}>
-          <Pressable style={CustomStyle.listButton}  onPress={() => navigation.navigate('ShowItemFromList', {name: item.name})}>
+      <View  key={item.name}>
+          <Pressable style={CustomStyle.listButton}  onPress={() => navigation.navigate('ShowItemFromList', {item})}>
           <Text>{item.name}</Text>
           </Pressable>
           <Text></Text>
