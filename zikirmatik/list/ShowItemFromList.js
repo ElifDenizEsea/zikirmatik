@@ -28,27 +28,26 @@ const MyList = ({navigation},{name}) => {
   return (
     <View style={{alignItems:'center', flex: 1}}>
 
-    <View  style={{alignItems:'center', flex: 1}}>
+      <View  style={{alignItems:'center', flex: 1}}></View>
+
+      <View style={CustomStyle.tableViewStyle} >
+        <Text  style={CustomStyle.textLabelShow} >   {t('SHOW_FROM_LIST.ZIKR_NAME')} : </Text>
+        <Text style={CustomStyle.textValueShow}>{zikrName}</Text>
       </View>
 
-<View >
+      <View style={CustomStyle.tableViewStyle} >
+        <Text  style={CustomStyle.textLabelShow} >   {t('SHOW_FROM_LIST.HOW_TO_READ')} : </Text>
+        <Text style={CustomStyle.textValueShow}>{zikrHowToRead}</Text>
+      </View>
 
-<Text  style={CustomStyle.resetButton} >{t('SHOW_FROM_LIST.ZIKR_NAME')} </Text>
-
-        <Text style={CustomStyle.finishedText}>{zikrName}</Text>
-  <Text  style={CustomStyle.resetButton} >{t('SHOW_FROM_LIST.HOW_TO_READ')} </Text>
-
-        <Text style={CustomStyle.finishedText}>{zikrHowToRead}</Text>
-
-        <Text  style={CustomStyle.resetButton} >{t('SHOW_FROM_LIST.ZIKR_COUNT')} </Text>
-
-        <Text style={CustomStyle.finishedText}>{zikrNumber}</Text>
-        </View>
-        <View  style={{alignItems:'center', flex: 1}}>
+      <View style={CustomStyle.tableViewStyle} >
+        <Text  style={CustomStyle.textLabelShow} >   {t('SHOW_FROM_LIST.ZIKR_COUNT')} : </Text>
+        <Text style={CustomStyle.textValueShow}>{zikrNumber}</Text>
+      </View>
+      
+      <View  style={{alignItems:'center', flex: 4}}>
           <AddButton   
             onAddPress = {() => {
-          console.log(count);
-          console.log(number);
               if(count < number) {
                 setCount(count+1)
               }
@@ -57,19 +56,21 @@ const MyList = ({navigation},{name}) => {
           labelOfButton={count>0?count:""}
           />
         
-        </View>
-        <View style={{alignItems:'center', flex: 1}}>
+      </View>
+      
+      <View style={{alignItems:'center', flex:2}}>
           <Text></Text>
           <Text></Text>
             {count==number && count!=0 && <Text style={CustomStyle.finishedText} >{t('COUNTER.FINISHED')}</Text>}
             {count==number && count!=0 && vibrateDevice()}
-        </View>
-        <View  style={{alignItems:'center', flex: 1}}>
+      </View>
+      
+      <View  style={{alignItems:'center', flex: 2}}>
            <Pressable style={CustomStyle.resetButton} 
              onPress={() => {setCount(0);onChangeNumber(parseInt(zikrNumber))}} > 
              <Text style={CustomStyle.buttonLabel}>{t('COUNTER.RESET_BUTTON')}</Text>
              </Pressable>
-        </View>
+      </View>
   </View>
   );
    

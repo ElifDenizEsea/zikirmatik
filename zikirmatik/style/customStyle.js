@@ -21,7 +21,33 @@ resetButton: {
     paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 2,
-    backgroundColor: '#ccc',
+    backgroundColor: '#FFE5CC',
+  },
+  myListButton: {    
+    height: 40,
+    width:80,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderRadius: 2,
+    backgroundColor: '#FFE5CC',
+  },
+  addToListButton: {    
+    height: 40,
+    width:60,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderRadius: 2,
+    backgroundColor: '#FFE5CC',
+  },
+  textLabelShow: {    
+    fontSize: 20,
+    borderRadius: 2,
+    color: '#fff',
+  },
+  textValueShow: {    
+    fontSize: 20,
+    borderRadius: 2,
+    color: '#fff',
   },
  customListButton: {    
     height: 40,
@@ -29,21 +55,21 @@ resetButton: {
     paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 2,
-    backgroundColor: '#ccc',
+    backgroundColor: '#FFE5CC',
   },
   listButton: { 
     paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 2,
-    backgroundColor: '#ccc',
+    backgroundColor: '#FFE5CC',
     alignItems: 'center',
     justifyContent: 'center',
   },
   inputNumber: {
     height: 40,
     width:158,
-    color: '#fff',
-    backgroundColor: '#ccc',
+    color: '#994C00',
+    backgroundColor: '#FFE5CC',
     borderWidth: 1,
     padding: 10,
     alignItems: 'center',
@@ -55,14 +81,14 @@ resetButton: {
     lineHeight: 21,
     fontWeight: 'bold',
     letterSpacing: 0.25,
-    color: 'white',
+    color: '#994C00',
   },
   countButton:{
     width:200,
     height:200,
     alignItems: 'center',
     justifyContent: "center",
-    backgroundColor: '#0b9e21',
+    backgroundColor: '#994C00',
     borderRadius: 100
 
   },
@@ -74,6 +100,15 @@ resetButton: {
     flex: 1,
     justifyContent: 'center',
   },
+tableViewStyle:{
+    flex: 1,
+    alignSelf: 'flex-start',
+    flexDirection: "row",
+    justifyContent: "left",
+    alignItems:"left",
+    flexWrap: "wrap",
+    textAlign: "justify"
+}
 
 });
 export default CustomStyle;

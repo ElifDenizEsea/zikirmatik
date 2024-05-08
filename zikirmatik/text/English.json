@@ -14,5 +14,8 @@
         "ZIKR_NAME": "Zikir name",
         "HOW_TO_READ": "How to read",
         "ZIKR_COUNT": "Zikr count"
+    },
+    "MY_LIST":{
+        "ADD": "Ekle"
     }
 }
