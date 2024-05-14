@@ -2,7 +2,7 @@ import React, { useState }  from 'react';
 import {View, Text,Vibration,Pressable,} from 'react-native';
 import { useRoute } from '@react-navigation/native';
 import CustomStyle from '../style/customStyle';
-import AddButton from '../counter/AddButton';
+import AddButton from '../counter/CountButton';
 import i18n from "../text/general";
 
 import {useTranslation} from 'react-i18next';
@@ -12,6 +12,13 @@ const initI18n = i18n;
 const MyList = ({navigation},{name}) => {
   const vibrateDevice=()=>{
     Vibration.vibrate(500);
+  }
+  const buttonLabel=()=>{
+    if(count==number && count!=0){
+      vibrateDevice();
+      return t('COUNTER.FINISHED');
+    }
+    return count>0?count:"";
   }
 
   const {t, i18n} = useTranslation();
@@ -53,17 +60,12 @@ const MyList = ({navigation},{name}) => {
               }
             }
           }
-          labelOfButton={count>0?count:""}
+          labelOfButton={buttonLabel()}
           />
         
       </View>
       
-      <View style={{alignItems:'center', flex:2}}>
-          <Text></Text>
-          <Text></Text>
-            {count==number && count!=0 && <Text style={CustomStyle.finishedText} >{t('COUNTER.FINISHED')}</Text>}
-            {count==number && count!=0 && vibrateDevice()}
-      </View>
+
       
       <View  style={{alignItems:'center', flex: 2}}>
            <Pressable style={CustomStyle.resetButton} 

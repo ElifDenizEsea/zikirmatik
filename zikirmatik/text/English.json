@@ -3,7 +3,8 @@
         "RESET_BUTTON": "Reset",
         "FINISHED": "Done",
         "INPUT_ZIKR": "Enter Zikr count",
-        "MY_LIST": "My List"
+        "MY_LIST": "My List",
+        "START":"Start"
     },
     "ADD_TO_LIST":{
         "ZIKR_NAME": "What is the zikr name?",

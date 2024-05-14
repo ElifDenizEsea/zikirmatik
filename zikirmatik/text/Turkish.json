@@ -3,7 +3,8 @@
         "RESET_BUTTON": "Sifirla",
         "FINISHED": "Tamamlandi",
         "INPUT_ZIKR": "Zikir sayisi giriniz",
-        "MY_LIST": "Listem"
+        "MY_LIST": "Listem",
+        "START":"Basla"
     },
     "ADD_TO_LIST":{
         "ZIKR_NAME": "Zikir ismi giriniz",

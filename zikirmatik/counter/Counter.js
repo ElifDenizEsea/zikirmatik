@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import {Vibration, View, Text,Pressable, TextInput} from 'react-native';
-import AddButton from './AddButton';
+import {Vibration, View, Text,Pressable, TextInput,Keyboard} from 'react-native';
+import CountButton from './CountButton';
 import CustomStyle from '../style/customStyle';
 import i18n from "../text/general";
 
@@ -12,10 +12,22 @@ const Counter = ({navigation}) => {
   const vibrateDevice=()=>{
     Vibration.vibrate(500);
   }
-
+  const buttonLabel=()=>{
+    if(count==number && count!=0){
+      vibrateDevice();
+      return t('COUNTER.FINISHED');
+    }
+    return count>0?count:"";
+  }
+ 
   const {t, i18n} = useTranslation();
-    const [count, setCount] = useState(0);
-    const [number, onChangeNumber] = React.useState('');
+  const [count, setCount] = useState(0);
+  const [number, onChangeNumber] = React.useState('');
+  const handleChange = (text) => { 
+      // Allow only numbers 
+      const numericValue = text.replace(/[^0-9]/g, ""); 
+      onChangeNumber(numericValue); 
+  }; 
    return (
     <View style={{alignItems:'center', flex: 7,}}>
     <View style={{alignItems:'center', flex: 1}}>
@@ -23,7 +35,7 @@ const Counter = ({navigation}) => {
         <View style={{ flex: 1}}>
             <TextInput 
               style={CustomStyle.inputNumber}
-              onChangeText={onChangeNumber}
+              onChangeText={handleChange}
               value={number}
               placeholder={
                 t('COUNTER.INPUT_ZIKR')}
@@ -32,8 +44,9 @@ const Counter = ({navigation}) => {
         
         </View>
         <View  style={{ flex: 1,}}>
-          <AddButton   
+          <CountButton   
             onAddPress = {() => {
+              Keyboard.dismiss();
               if(count != number){
                 setCount(0);
               }
@@ -42,7 +55,7 @@ const Counter = ({navigation}) => {
               }
             }
           }
-          labelOfButton={count>0?count:""}
+          labelOfButton={buttonLabel()}
           />
         
         </View>
@@ -51,8 +64,6 @@ const Counter = ({navigation}) => {
           <Text></Text>
           <Text></Text>
         <Text> </Text>
-            {count==number && count!=0 && <Text style={CustomStyle.finishedText} >{t('COUNTER.FINISHED')}</Text>}
-            {count==number && count!=0 && vibrateDevice()}
         </View>
     
         <View  style={{ flex: 1,}}>
