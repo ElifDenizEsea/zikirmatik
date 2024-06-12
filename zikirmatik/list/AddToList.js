@@ -21,15 +21,19 @@ const [zikrNumber, onChangeZikrNumber] = React.useState('');
       number:zikrNumber,
       lastCount:0
     };
-  
-    let filename = FileSystem.documentDirectory+"list.json";
-    const aa=await FileSystem.readAsStringAsync(filename);
+
+
+    let filename = FileSystem.documentDirectory+"myZikrList.json";
     var jsonArray = [];
-    jsonArray=JSON.parse(aa);
-  console.log(jsonArray); 
+    try{
+    const existing=await FileSystem.readAsStringAsync(filename);
+    jsonArray=JSON.parse(existing);
+    console.log(existing);
+    }catch(e){
+
+    }
   jsonArray.push(newZikr);
     await FileSystem.writeAsStringAsync(filename, JSON.stringify(jsonArray), { encoding: FileSystem.EncodingType.UTF8 });
-    console.log("3");
   };
   const aa=FileSystem.readAsStringAsync(FileSystem.documentDirectory+"text.txt");
 
@@ -48,7 +52,7 @@ const [zikrNumber, onChangeZikrNumber] = React.useState('');
     <TextInput               onChangeText={onChangeZikrNumber}
   style={CustomStyle.inputNumber}  keyboardType="numeric"  />
     <Pressable style={CustomStyle.listButton}  onPress={saveFile}>
-      <Text>save</Text>
+      <Text>{t('ADD_TO_LIST.SAVE')}</Text>
     </Pressable>
   </View>
    

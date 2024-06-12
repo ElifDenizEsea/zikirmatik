@@ -9,7 +9,9 @@
     "ADD_TO_LIST":{
         "ZIKR_NAME": "What is the zikr name?",
         "HOW_TO_READ": "How to read",
-        "INPUT_ZIKR": "Enter Zikr count"
+        "INPUT_ZIKR": "Enter Zikr count",
+        "SAVE":"Save",
+        "CLEAR":"Clear"
     },
     "SHOW_FROM_LIST":{
         "ZIKR_NAME": "Zikir name",
@@ -17,6 +19,6 @@
         "ZIKR_COUNT": "Zikr count"
     },
     "MY_LIST":{
-        "ADD": "Ekle"
+        "ADD": "Add"
     }
 }

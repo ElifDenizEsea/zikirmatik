@@ -9,7 +9,9 @@
     "ADD_TO_LIST":{
         "ZIKR_NAME": "Zikir ismi giriniz",
         "HOW_TO_READ": "Okunusunu giriniz",
-        "INPUT_ZIKR": "Zikir sayisi giriniz"
+        "INPUT_ZIKR": "Zikir sayisi giriniz",
+        "SAVE":"Kaydet",
+        "CLEAR":"Temizle"
     },
     "SHOW_FROM_LIST":{
         "ZIKR_NAME": "Zikir ismi",
