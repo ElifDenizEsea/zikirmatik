@@ -23,7 +23,7 @@ const [zikrNumber, onChangeZikrNumber] = React.useState('');
     };
 
 
-    let filename = FileSystem.documentDirectory+"myZikrList.json";
+    let filename = FileSystem.documentDirectory+"myZikrList97.json";
     var jsonArray = [];
     try{
     const existing=await FileSystem.readAsStringAsync(filename);
@@ -32,8 +32,10 @@ const [zikrNumber, onChangeZikrNumber] = React.useState('');
     }catch(e){
 
     }
-  jsonArray.push(newZikr);
+    jsonArray.push(newZikr);
     await FileSystem.writeAsStringAsync(filename, JSON.stringify(jsonArray), { encoding: FileSystem.EncodingType.UTF8 });
+    navigation.navigate('Counter')
+
   };
   const aa=FileSystem.readAsStringAsync(FileSystem.documentDirectory+"text.txt");
 

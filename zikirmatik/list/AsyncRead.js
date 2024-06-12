@@ -3,7 +3,7 @@ import * as FileSystem from "expo-file-system";
 
 
   export async function read(){
-    let filename = FileSystem.documentDirectory+"myZikrList.json";
+    let filename = FileSystem.documentDirectory+"myZikrList97.json";
   
     var jsonArray = [];
     try{
