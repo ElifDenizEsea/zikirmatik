@@ -8,21 +8,22 @@ import * as asyncRead from "./AsyncRead";
 import {useTranslation} from 'react-i18next';
 const initI18n = i18n;
 
-let data=[];
+let listOfZikr = [];
 
 const MyList =  ({navigation}) => {
 
+
   const {t, i18n} = useTranslation();
-
      asyncRead.read().then((incoming)=>{
+      this.listOfZikr=[];
       for(i=0;i<incoming.length;i++){
-        this.data[i]=incoming[i];
-        console.log(this.data);
-    }
+        this.listOfZikr.push(incoming[i]);
 
-  });
-
-  console.log(this.data);
+  }}).catch(function(error) {
+    console.log( error.message);
+    });
+    console.log("this.listOfZikr");
+console.log(this.listOfZikr);
   return (
 
   <View style={{ flex: 1}} >
@@ -30,8 +31,9 @@ const MyList =  ({navigation}) => {
     <View style={{ flex: 1}}></View>
     
     <ScrollView>
-      {Array.from(this.data).map(item=> 
-         {return(
+    {this.listOfZikr !=undefined?Array.from(this.listOfZikr).map(item=> 
+         {if(item != undefined)
+          return(
           <View  key={item.name} style={{  flex: 1}}>
            <Pressable style={CustomStyle.listButton}  onPress={() => navigation.navigate('ShowItemFromList', {item})}>
                <Text  style={CustomStyle.buttonLabel}>{item.name}</Text>
@@ -39,7 +41,7 @@ const MyList =  ({navigation}) => {
             <Text></Text>
           </View>
          );
-      })}
+      }):''}
 
     </ScrollView>
 
