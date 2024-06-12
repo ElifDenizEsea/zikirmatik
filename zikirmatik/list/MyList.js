@@ -3,36 +3,26 @@ import {View, Text,Pressable, ScrollView} from 'react-native';
 
 import CustomStyle from '../style/customStyle';
 import i18n from "../text/general";
-import * as FileSystem from "expo-file-system"
+import * as asyncRead from "./AsyncRead";
 
 import {useTranslation} from 'react-i18next';
 const initI18n = i18n;
-async function read(){
-  let filename = FileSystem.documentDirectory+"myZikrList.json";
 
-  var jsonArray = [];
-  try{
-  const existing=await FileSystem.readAsStringAsync(filename);
-  jsonArray=JSON.parse(existing);
-  console.log(jsonArray);
-  }catch(e){
-    console.log(e);
-
-  }
-  return Array.from(jsonArray); ;
-}
+let data=[];
 
 const MyList =  ({navigation}) => {
 
   const {t, i18n} = useTranslation();
 
- let data=[];
-  const dataFunc = async () => {
-    console.log("data func");
-    data= await read();
-    console.log(data);
-  }
-  console.log(data);
+     asyncRead.read().then((incoming)=>{
+      for(i=0;i<incoming.length;i++){
+        this.data[i]=incoming[i];
+        console.log(this.data);
+    }
+
+  });
+
+  console.log(this.data);
   return (
 
   <View style={{ flex: 1}} >
@@ -40,7 +30,7 @@ const MyList =  ({navigation}) => {
     <View style={{ flex: 1}}></View>
     
     <ScrollView>
-      {Array.from(data).map(item=> 
+      {Array.from(this.data).map(item=> 
          {return(
           <View  key={item.name} style={{  flex: 1}}>
            <Pressable style={CustomStyle.listButton}  onPress={() => navigation.navigate('ShowItemFromList', {item})}>
