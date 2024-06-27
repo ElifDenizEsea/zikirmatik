@@ -41,23 +41,39 @@ const [zikrNumber, onChangeZikrNumber] = React.useState('');
 
   const {t, i18n} = useTranslation();
   return (
-  <View style={{ flex: 1,}}>
-    <Text  style={CustomStyle.resetButton} >{t('ADD_TO_LIST.ZIKR_NAME')} </Text>
+
+    <View style={{alignItems:'center', flex: 3}}>
+
+<View  style={{alignItems:'center', flex: 1}}></View>
+<View  style={{alignItems:'center', flex: 1}}></View>
+<View  style={{alignItems:'center', flex: 1}}></View>
+<View style={CustomStyle.tableViewStyle} >
+    <Text  style={CustomStyle.textLabelShow} >{t('ADD_TO_LIST.ZIKR_NAME')} </Text>
     <TextInput               onChangeText={onChangeZikrName}
  style={CustomStyle.inputNumber} />
+</View>
 
-    <Text  style={CustomStyle.resetButton} >{t('ADD_TO_LIST.HOW_TO_READ')}</Text>
+<View style={CustomStyle.tableViewStyle} >
+    <Text  style={CustomStyle.textLabelShow} >{t('ADD_TO_LIST.HOW_TO_READ')}</Text>
     <TextInput                onChangeText={onChangeZikrRead}
  style={CustomStyle.inputNumber}   />
+</View>
 
-    <Text  style={CustomStyle.resetButton} >{t('ADD_TO_LIST.INPUT_ZIKR')}</Text>
+<View style={CustomStyle.tableViewStyle} >
+    <Text  style={CustomStyle.textLabelShow} >{t('ADD_TO_LIST.INPUT_ZIKR')}</Text>
     <TextInput               onChangeText={onChangeZikrNumber}
   style={CustomStyle.inputNumber}  keyboardType="numeric"  />
+
+</View>
+
     <Pressable style={CustomStyle.listButton}  onPress={saveFile}>
       <Text>{t('ADD_TO_LIST.SAVE')}</Text>
     </Pressable>
-  </View>
-   
+
+<View  style={{alignItems:'center', flex: 1}}></View>
+<View  style={{alignItems:'center', flex: 1}}></View>
+<View  style={{alignItems:'center', flex: 1}}></View>
+   </View>
   );
    
 }
