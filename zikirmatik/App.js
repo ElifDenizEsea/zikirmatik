@@ -19,7 +19,7 @@ function App() {
   };
   return (
     <View style={CustomStyle.container}>
-    <ImageBackground source={require('./assets/wallpaper.jpg')} style={CustomStyle.imageWallpaper}  resizeMode="cover" >
+    <ImageBackground source={require('./assets/Kuran.jpg')} style={CustomStyle.imageWallpaper}  resizeMode="cover" >
     
     <NavigationContainer theme={navTheme} >
 

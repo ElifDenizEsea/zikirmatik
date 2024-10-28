@@ -20,5 +20,6 @@
     },
     "MY_LIST":{
         "ADD": "Add"
-    }
+    },
+    "BACK":"Back"
 }

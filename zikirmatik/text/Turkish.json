@@ -20,5 +20,7 @@
     },
     "MY_LIST":{
         "ADD": "Ekle"
-    }
+    },
+    "BACK":"Geri"
+
 }

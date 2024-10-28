@@ -15,6 +15,9 @@ const MyList =  ({navigation}) => {
 
   const {t, i18n} = useTranslation();
      asyncRead.read().then((incoming)=>{
+      console.log("incmoing");
+      
+      console.log(incoming);
       this.listOfZikr=[];
       for(i=0;i<incoming.length;i++){
         this.listOfZikr.push(incoming[i]);
@@ -23,7 +26,11 @@ const MyList =  ({navigation}) => {
     console.log( error.message);
     });
     console.log("this.listOfZikr");
+
 console.log(this.listOfZikr);
+
+console.log("this.listOfZikr end");
+
   return (
 
   <View style={{ flex: 1}} >
@@ -50,6 +57,11 @@ console.log(this.listOfZikr);
             <Text  style={CustomStyle.buttonLabel}>{t('MY_LIST.ADD')}</Text>
           </Pressable>
         </View>
+  <View style={{ alignItems:'center',flex: 1}}>
+        <Pressable  style={CustomStyle.backButton} onPress={() => navigation.navigate('Counter')}>
+          <Text style={CustomStyle.buttonLabel}>{t('BACK')}</Text>
+          </Pressable>
+          </View>
   </View>
   );
    

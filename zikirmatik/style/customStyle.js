@@ -9,7 +9,7 @@ finishedText:{
 countText:{
     textAlign: 'center',
     fontSize: 40,
-    color: '#fff'
+    color: '#cce6ff'
 },
 addToListLabel:{
   textAlign: 'center',
@@ -21,55 +21,71 @@ resetButton: {
     paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 2,
-    backgroundColor: '#FFE5CC',
+    backgroundColor: '#cce6ff',
   },
-  myListButton: {    
+  myListButton: {
     height: 40,
     width:80,
     paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 2,
-    backgroundColor: '#FFE5CC',
+    backgroundColor: '#cce6ff',
   },
-  addToListButton: {    
+  backButton: {
     height: 40,
     width:60,
     paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 2,
-    backgroundColor: '#FFE5CC',
+    backgroundColor: '#cce6ff',
   },
-  textLabelShow: {    
+  saveButton: {
+    height: 40,
+    width:60,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderRadius: 2,
+    backgroundColor: '#cce6ff',
+  },
+  addToListButton: {
+    height: 40,
+    width:60,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderRadius: 2,
+    backgroundColor: '#cce6ff',
+  },
+  textLabelShow: {
     fontSize: 20,
     borderRadius: 2,
     color: '#fff',
   },
-  textValueShow: {    
+  textValueShow: {
     fontSize: 20,
     borderRadius: 2,
     color: '#fff',
   },
- customListButton: {    
+ customListButton: {
     height: 40,
     width:80,
     paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 2,
-    backgroundColor: '#FFE5CC',
+    backgroundColor: '#cce6ff',
   },
-  listButton: { 
+  listButton: {
     paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 2,
-    backgroundColor: '#FFE5CC',
+    backgroundColor: '#cce6ff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   inputNumber: {
     height: 40,
     width:158,
-    color: '#994C00',
-    backgroundColor: '#FFE5CC',
+    color: '#1c1c84',
+    backgroundColor: '#cce6ff',
     borderWidth: 1,
     padding: 10,
     alignItems: 'center',
@@ -81,14 +97,14 @@ resetButton: {
     lineHeight: 21,
     fontWeight: 'bold',
     letterSpacing: 0.25,
-    color: '#994C00',
+    color: '#1c1c84',
   },
   countButton:{
     width:200,
     height:200,
     alignItems: 'center',
     justifyContent: "center",
-    backgroundColor: '#994C00',
+    backgroundColor: '#77bbff',
     borderRadius: 100
 
   },

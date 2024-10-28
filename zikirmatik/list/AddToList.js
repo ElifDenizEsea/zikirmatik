@@ -13,7 +13,11 @@ const AddToList = ({navigation}) => {
 const [zikrName, onChangeZikrName] = React.useState('');
 const [zikrRead, onChangeZikrRead] = React.useState('');
 const [zikrNumber, onChangeZikrNumber] = React.useState('');
-
+const handleNumberChange = (text) => { 
+  // Allow only numbers 
+  const numericValue = text.replace(/[^0-9]/g, ""); 
+  onChangeZikrNumber(numericValue); 
+}; 
   const saveFile = async () => {
     const newZikr={
       name:zikrName,
@@ -28,51 +32,64 @@ const [zikrNumber, onChangeZikrNumber] = React.useState('');
     try{
     const existing=await FileSystem.readAsStringAsync(filename);
     jsonArray=JSON.parse(existing);
-    console.log(existing);
     }catch(e){
 
     }
     jsonArray.push(newZikr);
     await FileSystem.writeAsStringAsync(filename, JSON.stringify(jsonArray), { encoding: FileSystem.EncodingType.UTF8 });
-    navigation.navigate('Counter')
+    navigation.navigate('MyList')
 
   };
-  const aa=FileSystem.readAsStringAsync(FileSystem.documentDirectory+"text.txt");
 
   const {t, i18n} = useTranslation();
   return (
 
-    <View style={{alignItems:'center', flex: 3}}>
+    <View style={{alignItems:'center', flex: 1}}>
 
 <View  style={{alignItems:'center', flex: 1}}></View>
 <View  style={{alignItems:'center', flex: 1}}></View>
 <View  style={{alignItems:'center', flex: 1}}></View>
 <View style={CustomStyle.tableViewStyle} >
     <Text  style={CustomStyle.textLabelShow} >{t('ADD_TO_LIST.ZIKR_NAME')} </Text>
+
+<View  style={{alignItems:'center', flex: 1}}></View>
     <TextInput               onChangeText={onChangeZikrName}
  style={CustomStyle.inputNumber} />
 </View>
 
 <View style={CustomStyle.tableViewStyle} >
     <Text  style={CustomStyle.textLabelShow} >{t('ADD_TO_LIST.HOW_TO_READ')}</Text>
+
+<View  style={{alignItems:'center', flex: 1}}></View>
     <TextInput                onChangeText={onChangeZikrRead}
  style={CustomStyle.inputNumber}   />
 </View>
 
 <View style={CustomStyle.tableViewStyle} >
     <Text  style={CustomStyle.textLabelShow} >{t('ADD_TO_LIST.INPUT_ZIKR')}</Text>
-    <TextInput               onChangeText={onChangeZikrNumber}
-  style={CustomStyle.inputNumber}  keyboardType="numeric"  />
+
+<View  style={{alignItems:'center', flex: 1}}></View>
+    <TextInput   
+       style={CustomStyle.inputNumber}     
+      
+       value={zikrNumber}      
+      onChangeText={handleNumberChange}
+       keyboardType="numeric"  />
 
 </View>
 
-    <Pressable style={CustomStyle.listButton}  onPress={saveFile}>
-      <Text>{t('ADD_TO_LIST.SAVE')}</Text>
+    <Pressable style={CustomStyle.saveButton}  onPress={saveFile}>
+      <Text style={CustomStyle.buttonLabel}>{t('ADD_TO_LIST.SAVE')}</Text>
     </Pressable>
 
 <View  style={{alignItems:'center', flex: 1}}></View>
 <View  style={{alignItems:'center', flex: 1}}></View>
 <View  style={{alignItems:'center', flex: 1}}></View>
+<View style={{flex: 1,}}>
+        <Pressable  style={CustomStyle.backButton} onPress={() => navigation.navigate('MyList')}>
+          <Text style={CustomStyle.buttonLabel}>{t('BACK')}</Text>
+          </Pressable>
+          </View>
    </View>
   );
    
