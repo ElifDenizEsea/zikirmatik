@@ -1,7 +1,6 @@
 import { ImageBackground, View } from 'react-native';
 import Counter from './counter/Counter';
-import MyList from './list/MyList';
-import AddToList from './list/AddToList';
+import RecordedList from './list/RecordedList';
 import ShowItemFromList from './list/ShowItemFromList';
 import CustomStyle from './style/customStyle';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -19,14 +18,13 @@ function App() {
   };
   return (
     <View style={CustomStyle.container}>
-    <ImageBackground source={require('./assets/Kuran.jpg')} style={CustomStyle.imageWallpaper}  resizeMode="cover" >
+    <ImageBackground source={require('./assets/wallpaper.jpg')} style={CustomStyle.imageWallpaper}  resizeMode="cover" >
     
     <NavigationContainer theme={navTheme} >
 
      <Stack.Navigator initialRouteName="Counter" screenOptions={{headerShown: false}} >
       <Stack.Screen name="Counter" component={Counter}  />
-      <Stack.Screen name="MyList" component={MyList} />
-      <Stack.Screen name="AddToList" component={AddToList} />
+      <Stack.Screen name="RecordedList" component={RecordedList} />
       <Stack.Screen name="ShowItemFromList" component={ShowItemFromList} />
      </Stack.Navigator>
     </NavigationContainer>

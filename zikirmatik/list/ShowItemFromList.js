@@ -73,6 +73,11 @@ const MyList = ({navigation},{name}) => {
              <Text style={CustomStyle.buttonLabel}>{t('COUNTER.RESET_BUTTON')}</Text>
              </Pressable>
       </View>
+      <View style={{ alignItems: 'center', flex: 1 }}>
+        <Pressable style={CustomStyle.backButton} onPress={() => navigation.navigate('RecordedList')}>
+          <Text style={CustomStyle.buttonLabel}>{t('BACK')}</Text>
+        </Pressable>
+      </View>
   </View>
   );
    

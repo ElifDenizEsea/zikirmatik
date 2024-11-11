@@ -73,7 +73,7 @@ const Counter = ({navigation}) => {
              </Pressable>
         </View>
         <View style={{flex: 1,}}>
-        <Pressable  style={CustomStyle.myListButton} onPress={() => navigation.navigate('MyList')}>
+        <Pressable  style={CustomStyle.myListButton} onPress={() => navigation.navigate('RecordedList')}>
           <Text style={CustomStyle.buttonLabel}>{t('COUNTER.MY_LIST')}</Text>
           </Pressable>
           </View>

@@ -1,14 +1,596 @@
 [
-    {
-    "name":"fatiha",
-    "howToRead":"elham",
-    "number":"7",
-    "lastCount":"4"
-    },
-    {
-  "name":"name",
-  "howToRead":"how to read",
-  "number":"3",
-  "lastCount":"0"
+  {
+    "id":1,
+    "name": "ALLAH c.c.",
+    "howToRead": "ALLAH c.c.",
+    "number": "66"
+  },
+  {
+    "id":2,
+    "name": "Er-Rahmân",
+    "howToRead": "Er-Rahmân",
+    "number": "298"
+  },
+  {
+    "id":3,
+    "name": "Er-Rahim",
+    "howToRead": "Er-Rahim",
+    "number": "258"
+  },
+  {
+    "id":4,
+    "name": "El-Melik",
+    "howToRead": "El-Melik",
+    "number": "90"
+  },
+  {
+    "id":5,
+    "name": "El-Kuddûs",
+    "howToRead": "El-Kuddûs",
+    "number": "170"
+  },
+  {
+    "id":6,
+    "name": "Es-Selâm",
+    "howToRead": "Es-Selâm",
+    "number": "131"
+  },
+  {
+    "id":7,
+    "name": "El-Mü’min",
+    "howToRead": "El-Mü’min",
+    "number": "137"
+  },
+  {
+    "id":8,
+    "name": "El-Müheymin",
+    "howToRead": "El-Müheymin",
+    "number": "145"
+  },
+  {
+    "id":9,
+    "name": "El-Aziz",
+    "howToRead": "El-Aziz",
+    "number": "94"
+  },
+  {
+    "id":10,
+    "name": "El-Cebbâr",
+    "howToRead": "El-Cebbâr",
+    "number": "206"
+  },
+  {
+    "id":11,
+    "name": "El-Mütekebbir",
+    "howToRead": "El-Mütekebbir",
+    "number": "662"
+  },
+  {
+    "id":12,
+    "name": "El-Hâlık",
+    "howToRead": "EEl-Hâlık",
+    "number": "731"
+  },
+  {
+    "id":13,
+    "name": "El-Bârî",
+    "howToRead": "El-Bârî",
+    "number": "214"
+  },
+  {
+    "id":14,
+    "name": "El-Musavvir",
+    "howToRead": "El-Musavvir",
+    "number": "336"
+  },
+  {
+    "id":15,
+    "name": "El-Gaffâr",
+    "howToRead": "El-Gaffâr",
+    "number": "1281"
+  },
+  {
+    "id":16,
+    "name": "El-Kahhâr",
+    "howToRead": "El-Kahhâr",
+    "number": "306"
+  },
+  {
+    "id":17,
+    "name": "El-Vehhâb",
+    "howToRead": "El-Vehhâb",
+    "number": "14"
+  },
+  {
+    "id":18,
+    "name": "Er-Rezzâk",
+    "howToRead": "Er-Rezzâk",
+    "number": "308"
+  },
+  {
+    "id":19,
+    "name": "El-Fettâh",
+    "howToRead": "El-Fettâh",
+    "number": "489"
+  },
+  {
+    "id":20,
+    "name": "El-Alîm",
+    "howToRead": "El-Alîm",
+    "number": "150"
+  },
+  {
+    "id":21,
+    "name": "El-Kâbıd",
+    "howToRead": "El-Kâbıd",
+    "number": "903"
+  },
+  {
+    "id":22,
+    "name": "El-Bâsıt",
+    "howToRead": "El-Bâsıt",
+    "number": "72"
+  },
+  {
+    "id":23,
+    "name": "El-Hâfıd",
+    "howToRead": "El-Hâfıd",
+    "number": "1481"
+  },
+  {
+    "id":24,
+    "name": "Er-Râfî",
+    "howToRead": "Er-Râfî",
+    "number": "351"
+  },
+  {
+    "id":25,
+    "name": "El-Muiz",
+    "howToRead": "El-Muiz",
+    "number": "117"
+  },
+  {
+    "id":26,
+    "name": "El-Muzil",
+    "howToRead": "El-Muzil",
+    "number": "770"
+  },
+  {
+    "id":27,
+    "name": "Es-Semî",
+    "howToRead": "Es-Semî",
+    "number": "180"
+  },
+  {
+    "id":28,
+    "name": "El-Basîr",
+    "howToRead": "El-Basîr",
+    "number": "302"
+  },
+  {
+    "id":29,
+    "name": "El-Hakem",
+    "howToRead": "El-Hakem",
+    "number": "68"
+  },
+  {
+    "id":30,
+    "name": "El-Adl",
+    "howToRead": "El-Adl",
+    "number": "104"
+  },
+  {
+    "id":31,
+    "name": "El-Latîf",
+    "howToRead": "El-Latîf",
+    "number": "129"
+  },
+  {
+    "id":32,
+    "name": "El-Habîr",
+    "howToRead": "El-Habîr",
+    "number": "812"
+  },
+  {
+    "id":33,
+    "name": "El-Halîm",
+    "howToRead": "El-Halîm",
+    "number": "88"
+  },
+  {
+    "id":34,
+    "name": "El-Azîm",
+    "howToRead": "El-Azîm",
+    "number": "1020"
+  },
+  {
+    "id":35,
+    "name": "El-Gafûr",
+    "howToRead": "El-Gafûr",
+    "number": "1286"
+  },
+  {
+    "id":36,
+    "name": "Eş-Şekûr",
+    "howToRead": "Eş-Şekûr",
+    "number": "526"
+  },
+  {
+    "id":37,
+    "name": "El-Aliyy",
+    "howToRead": "El-Aliyy",
+    "number": "110"
+  },
+  {
+    "id":38,
+    "name": "El-Kebîr",
+    "howToRead": "El-Kebîr",
+    "number": "232"
+  },
+  {
+    "id":39,
+    "name": "El-Hafîz",
+    "howToRead": "El-Hafîz",
+    "number": "998"
+  },
+  {
+    "id":40,
+    "name": "El-Mukît",
+    "howToRead": "El-Mukît",
+    "number": "550"
+  },
+  {
+    "id":41,
+    "name": "El-Hasîb",
+    "howToRead": "El-Hasîb",
+    "number": "80"
+  },
+  {
+    "id":42,
+    "name": "El-Celîl",
+    "howToRead": "El-Celîl",
+    "number": "73"
+  },
+  {
+    "id":43,
+    "name": "El-Kerîm",
+    "howToRead": "El-Kerîm",
+    "number": "270"
+  },
+  {
+    "id":44,
+    "name": "Er-Rakîb",
+    "howToRead": "Er-Rakîb",
+    "number": "312"
+  },
+  {
+    "id":45,
+    "name": "El-Mücîb",
+    "howToRead": "El-Mücîb",
+    "number": "55"
+  },
+  {
+    "id":46,
+    "name": "El-Vâsî",
+    "howToRead": "El-Vâsî",
+    "number": "137"
+  },
+  {
+    "id":47,
+    "name": "El-Hakîm",
+    "howToRead": "El-Hakîm",
+    "number": "78"
+  },
+  {
+    "id":48,
+    "name": "El-Vedûd",
+    "howToRead": "El-Vedûd",
+    "number": "20"
+  },
+  {
+    "id":49,
+    "name": "El-Mecîd",
+    "howToRead": "El-Mecîd",
+    "number": "57"
+  },
+  {
+    "id":50,
+    "name": "El-Bâis",
+    "howToRead": "El-Bâis",
+    "number": "573"
+  },
+  {
+    "id":51,
+    "name": "Eş-Şehîd",
+    "howToRead": "Eş-Şehîd",
+    "number": "319"
+  },
+  {
+    "id":52,
+    "name": "El-Hakk",
+    "howToRead": "El-Hakk",
+    "number": "108"
+  },
+  {
+    "id":53,
+    "name": "El-Vekîl",
+    "howToRead": "El-Vekîl",
+    "number": "66"
+  },
+  {
+    "id":54,
+    "name": "El-Kaviyy",
+    "howToRead": "El-Kaviyy",
+    "number": "117"
+  },
+  {
+    "id":55,
+    "name": "El-Metîn",
+    "howToRead": "El-Metîn",
+    "number": "500"
+  },
+  {
+    "id":56,
+    "name": "El-Veliyy",
+    "howToRead": "El-Veliyy",
+    "number": "46"
+  },
+  {
+    "id":57,
+    "name": "El-Hamîd",
+    "howToRead": "El-Hamîd",
+    "number": "68"
+  },
+  {
+    "id":58,
+    "name": "El-Muhsî",
+    "howToRead": "El-Muhsî",
+    "number": "148"
+  },
+  {
+    "id":59,
+    "name": "El-Mübdi",
+    "howToRead": "El-Mübdi",
+    "number": "57"
+  },
+  {
+    "id":60,
+    "name": "El-Muid",
+    "howToRead": "El-Muid",
+    "number": "124"
+  },
+  {
+    "id":61,
+    "name": "El-Muhyî",
+    "howToRead": "El-Muhyî",
+    "number": "68"
+  },
+  {
+    "id":62,
+    "name": "El-Mümît",
+    "howToRead": "El-Mümît",
+    "number": "490"
+  },
+  {
+    "id":63,
+    "name": "El-Hayy",
+    "howToRead": "El-Hayy",
+    "number": "18"
+  },
+  {
+    "id":64,
+    "name": "El-Kayyûm",
+    "howToRead": "El-Kayyûm",
+    "number": "156"
+  },
+  {
+    "id":65,
+    "name": "El-Vâcid",
+    "howToRead": "El-Vâcid",
+    "number": "14"
+  },
+  {
+    "id":66,
+    "name": "El-Mâcid",
+    "howToRead": "El-Mâcid",
+    "number": "48"
+  },
+  {
+    "id":67,
+    "name": "El-Vâhid",
+    "howToRead": "El-Vâhid",
+    "number": "19"
+  },
+  {
+    "id":68,
+    "name": "Es-Samed",
+    "howToRead": "Es-Samed",
+    "number": "134"
+  },
+  {
+    "id":69,
+    "name": "El-Kâdir",
+    "howToRead": "El-Kâdir",
+    "number": "305"
+  },
+  {
+    "id":70,
+    "name": "El-Muktedir",
+    "howToRead": "El-Muktedir",
+    "number": "744"
+  },
+  {
+    "id":71,
+    "name": "El-Mukaddim",
+    "howToRead": "El-Mukaddim",
+    "number": "184"
+  },
+  {
+    "id":72,
+    "name": "El-Muahhir",
+    "howToRead": "El-Muahhir",
+    "number": "847"
+  },
+  {
+    "id":73,
+    "name": "El-Evvel",
+    "howToRead": "El-Evvel",
+    "number": "37"
+  },
+  {
+    "id":74,
+    "name": "El-Âhir",
+    "howToRead": "El-Âhir",
+    "number": "801"
+  },
+  {
+    "id":75,
+    "name": "Ez-Zâhir",
+    "howToRead": "Ez-Zâhir",
+    "number": "1106"
+  },
+  {
+    "id":76,
+    "name": "El-Bâtın",
+    "howToRead": "El-Bâtın",
+    "number": "62"
+  },
+  {
+    "id":77,
+    "name": "El-Vâlî",
+    "howToRead": "El-Vâlî",
+    "number": "47"
+  },
+  {
+    "id":78,
+    "name": "El-Müteâlî",
+    "howToRead": "El-Müteâlî",
+    "number": "551"
+  },
+  {
+    "id":79,
+    "name": "El-Berr",
+    "howToRead": "El-Berr",
+    "number": "202"
+  },
+  {
+    "id":80,
+    "name": "Et-Tevvâb",
+    "howToRead": "Et-Tevvâb",
+    "number": "409"
+  },
+  {
+    "id":81,
+    "name": "El-Müntakim",
+    "howToRead": "El-Müntakim",
+    "number": "630"
+  },
+  {
+    "id":82,
+    "name": "El-Afüvv",
+    "howToRead": "El-Afüvv",
+    "number": "156"
+  },
+  {
+    "id":83,
+    "name": "Er-Raûf",
+    "howToRead": "Er-Raûf",
+    "number": "287"
+  },
+  {
+    "id":84,
+    "name": "Mâlikü’l-Mülk",
+    "howToRead": "Mâlikü’l-Mülk",
+    "number": "212"
+  },
+  {
+    "id":85,
+    "name": "Zü’l- Celal-i ve’l-İkram",
+    "howToRead": "Zü’l- Celal-i ve’l-İkram",
+    "number": "1098"
+  },
+  {
+    "id":86,
+    "name": "El-Muksıt",
+    "howToRead": "El-Muksıt",
+    "number": "209"
+  },
+  {
+    "id":87,
+    "name": "El-Câmî",
+    "howToRead": "El-Câmî",
+    "number": "114"
+  },
+  {
+    "id":88,
+    "name": "El-Ganîyy",
+    "howToRead": "El-Ganîyy",
+    "number": "1060"
+  },
+  {
+    "id":89,
+    "name": "El-Muğnî",
+    "howToRead": "El-Muğnî",
+    "number": "1100"
+  },
+  {
+    "id":90,
+    "name": "El-Mânî",
+    "howToRead": "El-Mânî",
+    "number": "161"
+  },
+  {
+    "id":91,
+    "name": "Ed-Dâr",
+    "howToRead": "Ed-Dâr",
+    "number": "1001"
+  },
+  {
+    "id":92,
+    "name": "En-Nâfi",
+    "howToRead": "En-Nâfi",
+    "number": "201"
+  },
+  {
+    "id":93,
+    "name": "En-Nûr",
+    "howToRead": "En-Nûr",
+    "number": "256"
+  },
+  {
+    "id":94,
+    "name": "El-Hâdî",
+    "howToRead": "EEl-Hâdî",
+    "number": "20"
+  },
+  {
+    "id":95,
+    "name": "El-Bedî",
+    "howToRead": "El-Bedî",
+    "number": "86"
+  },
+  {
+    "id":96,
+    "name": "El-Bâki",
+    "howToRead": "El-Bâki",
+    "number": "113"
+  },
+  {
+    "id":97,
+    "name": "El-Vâris",
+    "howToRead": "EEl-Vâris",
+    "number": "707"
+  },
+  {
+    "id":98,
+    "name": "Er-Reşid",
+    "howToRead": "Er-Reşid",
+    "number": "514"
+  },
+  {
+    "id":99,
+    "name": "Es-Sabûr",
+    "howToRead": "Es-Sabûr",
+    "number": "298"
   }
 ]
